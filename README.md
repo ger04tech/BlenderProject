@@ -13,3 +13,11 @@
 6. Connects to my public repositories, including projects built with Python and Flutter.
 7. Responsive UI with Dark Mode / Light Mode with smooth theme transitions.
 8. Uses Three.js for 3D web rendering and model interaction.
+
+## 💻 Technology Used
+- 3D room modeled and exported using Blender
+- Portfolio hosted and deployed on Vercel
+- Version control and project storage using GitHub
+
+## About me
+Developed by German Sansores, a student from Tecnológico Nacional de México - Instituto Tecnológico de Mérida.
