@@ -96,9 +96,9 @@ nav a:hover {
     width: 100%;
     display: flex;
     align-items: center;
-    /* CAMBIO: Alineamos el contenido a la izquierda en lugar del centro */
+    /* Alineamos el contenido a la izquierda en lugar del centro */
     justify-content: flex-start;
-    /* CAMBIO: Le damos un margen izquierdo del 10% para que no quede pegado al borde */
+    /* Le damos un margen izquierdo del 10% para que no quede pegado al borde */
     padding-left: 10%;
 }
 
@@ -118,9 +118,9 @@ nav a:hover {
 .hero-content {
     position: relative;
     z-index: 2;
-    /* CAMBIO: Texto alineado a la izquierda */
+    /* Texto alineado a la izquierda */
     text-align: left;
-    /* CAMBIO: Ancho máximo limitado para que no tape todo el modelo */
+    /* Ancho máximo limitado para que no tape todo el modelo */
     max-width: 500px;
     pointer-events: none;
     background: var(--hero-overlay);
@@ -338,8 +338,13 @@ footer {
         display: none;
     }
 
-    /* CAMBIO: En celular, volvemos a centrar el contenido para que se vea bien */
+    /* CAMBIOS PARA MÓVIL (Fix del scroll) */
     #hero {
+        /* Reducimos la altura en móviles para que se vea la siguiente sección */
+        height: 80vh;
+        min-height: 500px;
+        /* Evita que se haga muy pequeño */
+
         justify-content: center;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -347,9 +352,22 @@ footer {
         /* Lo bajamos un poco */
     }
 
+    /* Aseguramos que el contenedor del canvas también respete esa altura */
+    #canvas-container {
+        height: 100%;
+        /* Se adapta al padre #hero */
+    }
+
     .hero-content {
         text-align: center;
         max-width: 100%;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
+        /* Hacemos el fondo un poco más visible en móvil para que se lea mejor */
+        background: rgba(15, 23, 42, 0.85);
+    }
+
+    /* En modo luz, fondo claro semitransparente */
+    body.light-mode .hero-content {
+        background: rgba(255, 255, 255, 0.85);
     }
 }
